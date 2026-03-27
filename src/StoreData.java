@@ -1,119 +1,100 @@
 import java.util.List;
-import java.util.Map;
 
 public class StoreData {
-    public static final List<Card> CARDS = List.of(
-            new Card(
-                    "chase_sapphire_preferred",
-                    "Chase Sapphire Preferred",
-                    "Chase",
-                    "Visa",
-                    95,
-                    Map.of(
-                            "travel", 5.0,
-                            "dining", 3.0,
-                            "groceries", 1.0,
-                            "gas", 1.0,
-                            "default", 1.0
-                    )
+
+    public static final List<Store> STORES = List.of(
+            //represents a new store - costco
+            //accepts visa
+            new Store(
+                    "costco",
+                    "Costco",
+                    "groceries",
+                    List.of("Amex", "Mastercard", "Discover"),
+                    "Only accepts Visa"
             ),
-            new Card(
-                    "amex_gold",
-                    "American Express Gold Card",
-                    "American Express",
-                    "Amex",
-                    250,
-                    Map.of(
-                            "dining", 4.0,
-                            "groceries", 4.0,
-                            "travel", 3.0,
-                            "gas", 1.0,
-                            "default", 1.0
-                    )
+            //represents a new store - walmart
+            //accepts all cards
+            new Store(
+                    "walmart",
+                    "Walmart",
+                    "groceries",
+                    List.of(),
+                    null
             ),
-            new Card(
-                    "citi_costco",
-                    "Costco Anywhere Visa",
-                    "Citi",
-                    "Visa",
-                    0,
-                    Map.of(
-                            "gas", 4.0,
-                            "travel", 3.0,
-                            "dining", 3.0,
-                            "groceries", 2.0,
-                            "default", 1.0
-                    )
+            //represents a new store - whole foods
+            //accepts all cards
+            new Store(
+                    "whole_foods",
+                    "Whole Foods",
+                    "groceries",
+                    List.of(),
+                    null
             ),
-            new Card(
-                    "capital_one_savor",
-                    "Capital One SavorOne",
-                    "Capital One",
-                    "Mastercard",
-                    0,
-                    Map.of(
-                            "dining", 3.0,
-                            "groceries", 3.0,
-                            "travel", 1.0,
-                            "gas", 1.0,
-                            "default", 1.0
-                    )
+            //represents a new store - aldi
+            //does not accept amex
+            new Store(
+                    "aldi",
+                    "ALDI",
+                    "groceries",
+                    List.of("Amex"),
+                    "Does not accept Amex"
             ),
-            new Card(
-                    "amex_blue_cash_preferred",
-                    "Blue Cash Preferred",
-                    "American Express",
-                    "Amex",
-                    95,
-                    Map.of(
-                            "groceries", 6.0,
-                            "gas", 3.0,
-                            "dining", 1.0,
-                            "travel", 1.0,
-                            "default", 1.0
-                    )
+            //represents a new store - chipotle
+            new Store(
+                    "chipotle",
+                    "Chipotle",
+                    "dining",
+                    List.of(),
+                    null
             ),
-            new Card(
-                    "chase_freedom_unlimited",
-                    "Chase Freedom Unlimited",
-                    "Chase",
-                    "Visa",
-                    0,
-                    Map.of(
-                            "travel", 5.0,
-                            "dining", 3.0,
-                            "groceries", 1.0,
-                            "gas", 1.0,
-                            "default", 1.5
-                    )
+            //represents a new store - starbucks
+            new Store(
+                    "starbucks",
+                    "Starbucks",
+                    "dining",
+                    List.of(),
+                    null
             ),
-            new Card(
-                    "citi_double_cash",
-                    "Citi Double Cash",
-                    "Citi",
-                    "Mastercard",
-                    0,
-                    Map.of(
-                            "dining", 2.0,
-                            "groceries", 2.0,
-                            "gas", 2.0,
-                            "travel", 2.0,
-                            "default", 2.0
-                    )
+            //represents a new store - mcdonald's
+            new Store(
+                    "mcdonalds",
+                    "McDonald's",
+                    "dining",
+                    List.of(),
+                    null
             ),
-            new Card(
-                    "wells_fargo_autograph",
-                    "Wells Fargo Autograph",
-                    "Wells Fargo",
-                    "Visa",
-                    0,
-                    Map.of(
-                            "dining", 3.0,
-                            "travel", 3.0,
-                            "gas", 3.0,
-                            "groceries", 1.0,
-                            "default", 1.0
-                    )
+            //represents a new store - shell gas stations
+            new Store(
+                    "shell",
+                    "Shell",
+                    "gas",
+                    List.of(),
+                    null
+            ),
+            //represents a new store - chevron gas stations
+            new Store(
+                    "chevron",
+                    "Chevron",
+                    "gas",
+                    List.of(),
+                    null
+            ),
+            //represents a new store - southwest airlines
+            new Store(
+                    "southwest",
+                    "Southwest Airlines",
+                    "travel",
+                    List.of(),
+                    null
+            ),
+            //represents a new store - marriott hotels
+            new Store(
+                    "marriott",
+                    "Marriott",
+                    "travel",
+                    List.of(),
+                    null
             )
     );
+
 }
